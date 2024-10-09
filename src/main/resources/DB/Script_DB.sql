@@ -1,0 +1,53 @@
+CREATE SEQUENCE secuencia_estudiante START WITH 500 INCREMENT BY 50;
+
+CREATE TABLE PRUEBAESTUDIANTE (
+    Eid INT PRIMARY KEY,
+    Nombre VARCHAR(255),
+    Especialidad VARCHAR(255),
+    Grado VARCHAR(3)
+);
+
+INSERT INTO PRUEBAESTUDIANTE (Eid, Nombre, Especialidad, Grado)
+VALUES 
+(100, 'JONES', 'HISTORIA', 'GR'),
+(150, 'PARKS', 'CONTABILIDAD', 'SO'),
+(200, 'BAKER', 'MATEMATICAS', 'GR'),
+(250, 'GLASS', 'HISTORIA', 'SN'),
+(300, 'BAKER', 'CONTABILIDAD', 'SN'),
+(350, 'RUSSELL', 'MATEMATICAS', 'JR'),
+(400, 'REY', 'CONTABILIDAD', 'FR'),
+(450, 'JONES', 'HISTORIA', 'SN');
+
+CREATE TABLE PRUEBAINSCRIPCION (
+    Eid INT,
+    NombreClase VARCHAR(5),
+    Posicion INT CHECK (Posicion BETWEEN 1 AND 9),
+    PRIMARY KEY (Eid, NombreClase),
+    FOREIGN KEY (Eid) REFERENCES PRUEBAESTUDIANTE (Eid)
+);
+
+INSERT INTO PRUEBAINSCRIPCION (Eid, NombreClase, Posicion)
+VALUES 
+(100, 'BD445', 1),
+(150, 'BA200', 1),
+(200, 'BD445', 2),
+(200, 'CS250', 1),
+(300, 'CS150', 1),
+(400, 'BA200', 2),
+(400, 'BF410', 1),
+(400, 'CS250', 2),
+(450, 'BA200', 3);
+
+CREATE TABLE PRUEBACLASE (
+    NombreClase VARCHAR(5) PRIMARY KEY,
+    Horario VARCHAR(4),
+    Aula VARCHAR(5)
+);
+
+-- Insertar ejemplo
+INSERT INTO PRUEBACLASE (NombreClase, Horario, Aula)
+VALUES 
+('BA200', 'M-F9', 'SC110'),
+('BD445', 'MWF3', 'SC213'),
+('BF410', 'MWF8', 'SC213'),
+('CS150', 'MWF3', 'EA304');

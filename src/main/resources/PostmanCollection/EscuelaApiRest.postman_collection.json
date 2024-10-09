@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "359f543e-4311-4c2d-be6c-c3d49ad5ee48",
+		"name": "EscuelaApiRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10893746"
+	},
+	"item": [
+		{
+			"name": "obtenerEstudiantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/EscuelaApi/obtenerEstudiantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"EscuelaApi",
+						"obtenerEstudiantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerEstudiantePorId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "id",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/EscuelaApi/obtenerEstudiantePorId/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"EscuelaApi",
+						"obtenerEstudiantePorId",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearEstudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Juan\",\r\n  \"especialidad\": \"Matematicas\",\r\n  \"grado\": \"FS\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/EscuelaApi/crearEstudiante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"EscuelaApi",
+						"crearEstudiante"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarEstudiante",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eid\": 500,\r\n    \"nombre\": \"Juanes\",\r\n    \"especialidad\": \"Matematicas\",\r\n    \"grado\": \"FS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/EscuelaApi/actualizarEstudiante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"EscuelaApi",
+						"actualizarEstudiante"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarEstudiante",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eid\": 250,\r\n    \"nombre\": \"GLASS\",\r\n    \"especialidad\": \"HISTORIA\",\r\n    \"grado\": \"SN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/EscuelaApi/eliminarEstudiante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"EscuelaApi",
+						"eliminarEstudiante"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarEstudiantePorId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/EscuelaApi/eliminarEstudiantePorId/450",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"EscuelaApi",
+						"eliminarEstudiantePorId",
+						"450"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarEstudiantePorNombre",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/EscuelaApi/eliminarEstudiantePorNombre/RUSSELL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"EscuelaApi",
+						"eliminarEstudiantePorNombre",
+						"RUSSELL"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
