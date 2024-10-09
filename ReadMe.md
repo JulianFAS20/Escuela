@@ -1,3 +1,5 @@
+# El ejercicio de maquetacion y el documento con los demas ejercicios se encuentra en la carpeta denominada: EjercicioMaquetacion_Y_Doc
+
 # Getting Started
 El siguiente archivo tiene como finalidad dar instrucciones claras para la ejecución de este proyecto en un entorno local:
 1. Debe tener instaladas herramientas tales como Postman, Eclipse, Docker Desktop, teniendo en cuenta que se requiere 

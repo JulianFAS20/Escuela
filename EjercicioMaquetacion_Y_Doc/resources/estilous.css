@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: auto; /* o puedes usar height: 100vh; para ocupar toda la altura de la pantalla */
+    padding: 20px; /* opcional, para agregar espacio interno */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    margin: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    max-width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mejora la apariencia de listas no numeradas */
+ul {
+    list-style-type: disc; /* Estilo de viñetas */
+    padding-left: 20px; /* Espacio entre las viñetas y el texto */
+}
+
+li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+}
+
+/* Para mantener la estética con un fondo blanco */
+ul li::marker {
+    color: #35424a; /* Color de las viñetas */
+    font-weight: bold; /* Para que las viñetas sean más prominentes */
+}
+
+.social-button {
+    display: inline-block;
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 10px 5px; /* Espaciado externo entre botones */
+    background-color: #35424a; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave al pasar el mouse */
+}
+
+.social-button:hover {
+    background-color: #455a64; /* Color de fondo al pasar el mouse */
+}
